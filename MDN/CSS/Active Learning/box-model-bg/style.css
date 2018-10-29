@@ -1,0 +1,76 @@
+@font-face {
+    font-family: nanummyeongjo;
+    src: url('nanummyeongjo-regular.woff2') format('woff2'),
+         url('nanummyeongjo-regular.woff') format('woff'),
+         url('NanumMyeongjo-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div {
+	width: 70%;
+	height: 20rem;
+	position: relative;
+	margin: 3rem auto 3rem auto;
+	border: 2px solid #737984;
+}
+
+#div1 {
+	width:70%;
+	height: 20rem;
+	background-color: #a89b8f;
+	background-image: url('../img/logo/GitHub_Logo_White.png'),
+					linear-gradient(rgba(0, 0, 0, 0.5), rgba(1, 1, 1, 0)),
+					url('../img/loish.jpg');
+}
+
+#div2 {
+	background-image: url('../img/mushroom.jpg'),
+					  url('../img/english-grass.jpg');
+	background-position: center, top 0px left 0px;
+	background-size: 30%, cover;
+	background-repeat: round space, no-repeat;
+}
+
+#div3 {
+	height: 500px;
+	background-image: url('../img/wavesheep.jpg');
+	background-position: top 0px center;
+	background-attachment: local;
+	overflow: auto;
+}
+
+#div3 pre {
+	color: white;
+	text-align: center;
+	font-family: nanummyeongjo, courier, serif;
+}
+
+#div4 {
+	padding: 1em;
+	background: url('../img/logo/ig-white.png') no-repeat center/5rem,
+				linear-gradient(rgba(1.0, 1.0, 1.0, 0.7) 5%, rgba(0,0,0,0)),
+				fixed content-box url('../img/loish2.png') center/30%,
+				#6d6f72 ;
+}
+
+#div5 {
+	height: 50em;
+	background: url('../img/loish3.jpg') fixed;
+	border: 2em solid rgba(99, 108, 122, 0.5);
+	/* The same rounded corner on every corner 
+	border-radius:  30px/30px; */
+	/* Elliptical corners - same on all 
+	border-radius: 10px/20px; /* x / y */
+	/* Elliptical corners - adjacent mirror 
+	border-radius: 10px 30px / 20px 40px; */
+	/* Different radius for every corners
+	border-radius: 10px 20px 40px 30px; */ 
+	/* Three value syntax 
+	border-radius: 10px 30% 0;*/
+	border-image-source: url('../img/border2.png');
+	border-image-slice: 40;
+	border-image-repeat: round;
+	border-image-width: 1.5em;
+	border-image-outset: 0.5em;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Payment
+	</title>
+	<meta name="description" content="HTML Forms">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hajar Razip">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Montserrat" rel="stylesheet"> 
+	<link rel="stylesheet"  type="text/css" href="style.css" />
+</head>
+
+<body>
+
+<form>
+	<h1>Payment Form</h1>
+	<p style="color:red;">Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+
+	<!-- CONTACT INFORMATION -->
+	<section>
+		<h2>Contact Information</h2>
+		<fieldset>
+			<legend>Title</legend>
+			<ul>
+				<li>
+					<label for="title_1">
+						<input type="radio" id="title_1" name="title" value="M.">
+						Mister
+					</label>
+				</li>
+				<li>
+					<label for="title_2">
+						<input type="radio" id="title_2" name="title" value="Ms.">
+						Miss
+					</label>
+				</li>
+			</ul>
+		</fieldset>
+
+		
+		<p>
+			<label for="name">
+				<span>Name: </span>
+				<strong><abbr title="required">*</abbr></strong>
+			</label>
+			<input type="text" id="name" name="username" placeholder="John Doe">
+		</p>
+		<p>
+			<label for="mail">
+				<span>E-mail: </span>
+				<strong><abbr title="required">*</abbr></strong>
+			</label>
+			<input type="email" id="mail" name="usermail" placeholder="johndoe@mailbox.com">
+		</p>
+		<p>
+			<label for="pwd">
+				<span>Password: </span>
+				<strong><abbr title="required">*</abbr></strong>
+			</label>
+			<input type="password" id="pwd" name="password" placeholder="*****">
+		</p>
+		
+	</section>
+
+	<!-- PAYMENT INFORMATION --> 
+	<section>
+		<h2>Payment Information</h2>
+		<p>
+			<label for="card">
+				<span>Card type: </span>
+			</label>
+			<select id="card" name="usercard">
+				<option value="visa">Visa</option>
+				<option value="mc">Mastercard</option>
+				<option value="amex">American Express</option>
+			</select>
+		</p>
+		<p>
+			<label for="number">
+				<span>Card number: </span>
+				<strong><abbr title="required">*</abbr></strong>
+			</label>
+			<input type="text" id="number" name="cardnumber" maxlength="16">
+		</p>
+		<p>
+			<label for="date">
+				<span>Expiration date: </span>
+				<strong><abbr title="required">*</abbr></strong>
+				<em>formatted as mm/yy</em>
+			</label>
+			<input type="text" id="date" name="expiration">
+		</p>
+	</section>
+
+	<p> <button type="submit">Validate the payment</button></p>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

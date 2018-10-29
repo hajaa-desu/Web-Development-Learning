@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Random color example — event handler property</title>
+
+    <style>
+      button {
+        margin: 10px;
+      }
+
+      .a-bunch-o-tiles {
+        width: 70%;
+        display: grid;
+        grid-column-gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      .a-bunch-o-tiles p {
+        background-color: rgb(153, 204, 255);
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>Change color</button>
+
+    <div class='a-bunch-o-tiles'>
+    <p>TILE 1</p>
+    <p>TILE 2</p>
+    <p>TILE 3</p>
+    <p>TILE 4</p>
+    <p>TILE 5</p>
+    <p>TILE 6</p>
+    <p>TILE 1</p>
+    <p>TILE 2</p>
+    <p>TILE 3</p>
+    <p>TILE 4</p>
+    <p>TILE 5</p>
+    <p>TILE 6</p>
+
+    </div>
+    <script>
+      var btn = document.querySelector('button');
+      function random(number) {
+        return Math.floor(Math.random()*number);
+      }
+      function bgChange(e) {
+        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        e.target.style.backgroundColor = rndCol;
+        console.log(e); 
+      }
+
+      btn.addEventListener('click', bgChange);
+
+      var wall = document.querySelector('.a-bunch-o-tiles');
+      var tile = document.querySelectorAll('.a-bunch-o-tiles p'); 
+
+      function removeTile(e) {
+        e.target.parentNode.removeChild(e.target);
+      }
+
+      for (var i = 0; i < tile.length; i++) {
+        tile[i].style.backgroundColor = 'red';
+        tile[i].addEventListener('mouseover', function(e) {
+          e.target.style.backgroundColor = '#a3bbe0'; // Cannot use tile[i], because addEventListener is a method of object tile[i], hence the scope is within tile[i] (tile[i] is the e.target, so the name tile[i] did not exist within the scope)
+        });
+        tile[i].addEventListener('mouseout', function(e) {
+          e.target.style.backgroundColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        })
+        tile[i].onclick = removeTile;
+      }
+    </script>
+  </body>
+</html>
+

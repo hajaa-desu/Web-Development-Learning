@@ -1,0 +1,117 @@
+html {
+	background-color: #b8bbc1;
+}
+
+p {
+	margin: 0;
+}
+
+article {
+	max-width: 500px;
+	padding: 10px;
+	background-color: #8d929b;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+}
+
+.simple {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7),
+				10px 10px 10px rgba(0, 0, 255, 0.5);
+}
+
+#neon-lights {
+	font-family: 'Pacifico', cursive; 
+	font-size: 5em;
+	text-align: center;
+	margin: 1em auto 1em auto;
+	color: magenta;
+	text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5),
+				 10px 10px 10px rgba(255, 0, 233, 0.5);
+}
+
+button {
+	width: 150px;
+	font-size: 1.1rem;
+	line-height: 2;
+	border-radius: 10px; 
+	border: none;
+	background-image: linear-gradient(to bottom right, #777, #ddd);
+	box-shadow: 1px 1px 1px black,
+				inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+				inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+}
+
+button:focus, button:hover {
+	background-image: linear-gradient(to bottom right, #888, #eee);
+}
+
+button:active {
+	box-shadow: inset 2px 2px 1px black, 
+				inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+				inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+}
+
+p.filter, p.box-shadow {
+	margin: 1rem auto;
+	padding: 20px;
+	width: 100px;
+	border: 5px dashed red;
+}
+
+.filter {
+	-webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+	filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+}
+
+.box-shadow {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+div#blendy div {
+	width: 250px;
+	height: 130px;
+	padding: 10px; 
+	margin: 10px; 
+	display: inline-block;
+	background: url("../img/loish.jpg");
+	background-color: green
+}
+
+div#blendy div.multiply {
+	background-blend-mode: multiply;
+}
+
+div#mix-blend article {
+	width: 250px;
+	height: 180px;
+	margin: 10px;
+	position: relative;
+	display: inline-block;
+}
+
+div#mix-blend div {
+	width: 200px;
+	height: 130px;
+	padding: 10px;
+	margin: 10px;
+}
+
+div#mix-blend article div:first-child {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	background: url("../img/loish2.png");
+	background-color: green;
+}
+
+div#mix-blend article div:last-child {
+	background-color: purple;
+	position: absolute;
+	bottom: -10px;
+	right: 0;
+	z-index: -1;
+}
+
+div#mix-blend article div.multiply-mix {
+	mix-blend-mode: multiply;
+}
+

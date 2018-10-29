@@ -1,0 +1,55 @@
+@font-face {
+    font-family: nanum;
+    src: url(NanumMyeongjo-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General styles */
+
+body {
+  margin: 0;
+}
+
+body > * {
+  padding: 10px;
+  font-size: 20px;
+  border: 20px solid rgba(0,0,0,0.5);
+}
+
+/* specific boxes */
+
+header, footer {
+  background-color: rgb(219, 196, 46);
+  color: white;
+}
+
+main {
+  width: 60%;
+  height: 200px;
+  background-color: rgba(127, 193, 224, 0.5);
+  background-image: url(loish2.png);
+  background-clip: content-box;
+  margin: 30px;
+  margin-top: -50px;
+  padding: 10%;
+
+}
+
+header {
+
+}
+
+footer {
+	margin-top: 15px;
+	height: 300px;
+	background-image: url(loish2.png);
+	background-repeat: no-repeat;
+	background-clip: padding-box;
+	overflow: auto;
+}
+
+#poem {
+	text-align: center;
+	font-family: nanum, arial, sans-serif;
+}

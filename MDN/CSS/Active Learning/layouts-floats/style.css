@@ -1,0 +1,49 @@
+body {
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto;
+	font: .9em/1.2 Arial, Helvetica, sans-serif;
+}
+
+.box {
+	float: left;
+	width: 150px;
+	height: 200px;
+	margin: 15px;
+	border-radius: 10px;
+	background: url("../img/ydk.jpg") no-repeat center;
+	background-size: 200%;
+	padding: 1em;
+	color: white;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.box2 {
+	float: right;
+	width: 150px;
+	height: 400px;
+	margin: 15px;
+	border-radius: 10px;
+	background: url("../img/loish.jpg") no-repeat center;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.special {
+	background-color: #74846f;
+}
+
+.cleared {
+	clear: left;
+}
+
+.wrapper {
+	background-color: #d6d5af;
+	padding: 10px;
+	color: #fff;
+}
+
+.wrapper::after {
+	content: "";
+	clear: both;
+	display: flow-root;
+}

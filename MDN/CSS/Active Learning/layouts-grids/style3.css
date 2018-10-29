@@ -1,0 +1,30 @@
+html {
+	font-size: 10px;
+}
+.container {
+	font-size: 1.6rem;
+	width: 90%;
+	max-width: 800px;
+	margin: 20px auto;
+	display: grid;
+	grid-template-columns: 1fr 2.5fr;
+	grid-gap: 20px;
+}
+
+.container * {
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.container header {
+	background: url("../img/loish.jpg");
+}
+
+.container aside {
+	border-radius: 0;
+	border-right: 1px solid grey;
+}
+
+.container footer {
+	background: #cebab3;
+}

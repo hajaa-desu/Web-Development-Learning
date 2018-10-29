@@ -1,0 +1,46 @@
+html {
+	font-size: 10px;
+}
+
+.main-box {
+	height: 20rem;
+	width: 50rem;
+	background-color: rgba(151, 176, 216, 0.4);
+	background-image: url(loish.jpg);
+	background-clip: content-box;
+
+	margin: 5rem 2rem 5rem 2rem;
+	padding: 5rem;
+	outline: 1px solid rgb(151, 176, 216);
+
+	box-sizing: border-box;
+}
+
+.over-box {
+	height: 20rem;
+	width: 50rem;
+	border: 2px solid black;
+	float: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.demo-box {
+	width: 30rem;
+	height: 60rem;
+	padding: 10rem;
+	outline: 1px solid rgb(147, 85, 85);
+	background-color: rgba(234, 208, 112, 0.6);
+	background-clip: content-box;
+	
+	position: relative;
+	left: 10rem;
+
+	overflow: hidden;
+}
+
+#loish-img {
+	border-radius: 50%;
+	opacity: 0.85;
+}

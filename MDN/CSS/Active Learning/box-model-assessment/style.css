@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  background-color: #666666;
+  text-align: center;
+}
+
+body {
+  margin: 20px auto 20px auto;
+  width: 210mm;
+  background: url("top-image.png") no-repeat top center;
+  background: linear-gradient(to bottom, rgba(0,0,0, 0.3), rgba(0, 0, 0, 0) 10%),
+              linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 20%),
+              url("top-image.png") no-repeat top center,
+              url("bottom-image.png") no-repeat bottom center,
+              white; 
+  border-top: 1mm solid red;
+  border-bottom: 1mm solid red;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+article {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background: url("logo.png");
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  /* -webkit-filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.7));*/
+
+}
+
+#written-text {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  text-align: center;
+  font-family: "Sacramento", cursive;
+  font-size: 1.5rem;
+  width: 70%;
+  line-height: 2.0;
+  color: rgba(0,0,0, 0.8);
+}
+/* Your CSS below here */

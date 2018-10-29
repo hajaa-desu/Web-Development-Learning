@@ -1,0 +1,22 @@
+div {
+	width: 40rem;
+	height: 40rem;
+	position: relative;
+	margin: auto;
+}
+
+p {
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	font-size: 7rem;
+	margin: 0;
+	font-family: "Permanent Marker", cursive;
+	background: url("../img/loish2.png") no-repeat center padding-box fixed;
+}
+
+.text-clip {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

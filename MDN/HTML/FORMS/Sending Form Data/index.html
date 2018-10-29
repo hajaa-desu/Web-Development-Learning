@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Form Widgets
+	</title>
+	<meta name="description" content="Form Widgets">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hajar Razip">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Montserrat|Charmonman" rel="stylesheet"> 
+	<link rel="stylesheet"  type="text/css" href="style.css" />
+</head>
+
+<body>
+
+	<form action="#" method="get">
+		<fieldset>
+			<legend>GET</legend>
+			<p class="note">Data is appended to url instead of body of HTTP request: <span class="code">URL/?name1=value1&name2=value2&...</span></p>
+			<div>
+				<label for="say">Please enter a greeting:</label>
+				<input name="say" id="say" value="Hi">
+			</div>
+			<div>
+				<label for="to">To:</label>
+				<input name="to" id="to" value="Mom">
+			</div>
+			<div>
+				<p class="note">Testing for stupidity ... </p>
+				<label for="pw">Password:</label>
+				<input name="pw" id="pw" type="password">
+			</div>
+			<div class="send-button">
+				<button>Send</button>
+			</div>
+		</fieldset>
+	</form>
+	<form action="#" method="post">
+		<fieldset>
+			<legend>POST</legend>
+			<p class="note">Data is appended to the body of the http request</p>
+			<div>
+				<label for="say">The greeting is </label>
+				<input name="say" id="say" value="Hello">
+			</div>
+			<div>
+				<label for="to">and it is meant for a certain</label>
+				<input name="to" id="to" value="beloved"> 
+			</div>
+			<div> class="send-button">
+				<button>Send</button>	
+			</div>
+		</fieldset>
+	</form>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

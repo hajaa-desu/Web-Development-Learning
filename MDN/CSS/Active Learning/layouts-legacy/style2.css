@@ -1,0 +1,33 @@
+.wrapper {
+	width: 90%;
+	max-width: 1200px;
+	border: 2px solid grey;
+}
+
+.row {
+	height: 100px;
+}
+.col {
+	width: 8%;
+	margin: auto;
+	height: 50px;
+	background: #91a088;
+	float:left;
+	border: 1px solid black;
+}
+
+.span1 {
+	width: 8%;
+}
+
+.span6 {
+	width: 48%;
+}
+
+.span3 {
+	width: 24%;
+}
+
+.span2 {
+	width: 16%;
+}

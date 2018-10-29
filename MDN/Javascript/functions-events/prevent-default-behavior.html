@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="JS - Default Behaviors">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hajar Razip">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet"  type="text/css" href="style.css" />
+</head>
+
+<body>
+	<form>
+		<div>
+			<label for="fname">First name: </label>
+			<input id="fname" type="text">
+		</div>
+		<div>
+			<label for="lname">Last name: </label>
+			<input id="lname" type="text">
+		</div>
+		<div>
+			<input id="submit" type="submit">
+		</div>
+	</form>
+	
+	<p></p>
+
+	<script>
+		/* Checks if the form fields are empty */ 
+		var form = document.querySelector('form');
+		var fname = document.getElementById('fname');
+		var lname = document.getElementById('lname');
+		var submit = document.getElementById('submit');
+		var para = document.querySelector('p');
+
+		form.onsubmit = function(e) {
+			if (fname.value === '' || lname.value === '') {
+				e.preventDefault(); 
+				para.textContent = 'You need to fill in both names!';
+			}
+		}
+	</script>
+</body>
+
+</html>

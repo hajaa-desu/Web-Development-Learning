@@ -1,0 +1,81 @@
+
+@counter-style thumbs {
+	system: cyclic;
+	symbols: "\1F44D";
+	suffix: " ";
+}
+
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-family: Barlow, Verdana, sans-serif;
+}
+
+body {
+	counter-reset: section;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h2.cnter-reset {
+	counter-reset: section 0;
+}
+
+h2::before {
+	counter-increment: section 5;
+	content: "Section " counter(section) ": ";
+}
+
+ul,ol,dl,p {
+  font-size: 1.5rem;
+}
+
+li, p {
+  line-height: 1.5;
+}
+
+/* Description list styles */
+
+
+dd, dt {
+  line-height: 1.5;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-bottom: 1.5rem;
+}
+
+ol {
+	/* list-style-type: hiragana-iroha; */
+}
+
+ul {
+	width: 300px;
+	list-style: symbols(cyclic "★" "☔" "\2600");
+	/*list-style-position: inside;*/
+	/*list-style: symbols(numeric "★" "☔" "\2600");*/
+}
+
+ul.ohmy {
+	padding-left: 2rem;
+}
+
+ul.ohmy li {
+	list-style: none;
+	padding-left: 2rem;
+	background-image: url(android.svg);
+	background-position: 0 0;
+	background-size: 1.6rem 1.6rem;
+	background-repeat: no-repeat;
+}
+
+ol.otherlist {
+	/* list-style: thumbs; */
+	counter-increment: none;
+}

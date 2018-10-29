@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Box Model">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hajar Razip">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+	body {
+		background: url('../img/loish.jpg') no-repeat;
+		width: 980px;
+	}
+
+	button {
+		width: 150px;
+		height: 30px;
+		border-radius: 10px;
+		background-color: #7f9ed1;
+		color: white;
+	}
+	</style>
+</head>
+
+<body>
+
+	<button>機械をスタート</button>
+
+	<p>機械は死んでた。。。</p>
+
+	<script>
+		var btn = document.querySelector('button');
+		var stat = document.querySelector('p');
+
+		btn.addEventListener('click', updateBtn);
+
+		function updateBtn() {
+			if (btn.textContent === '機械をスタート') {
+				btn.textContent = '機械をストープ';
+				stat.textContent = '機械は生きます！';
+			} else {
+				btn.textContent = '機械をスタート';
+				stat.textContent = '機械は死んでた。。。';
+			}
+		}
+	</script>
+</body>
+</html>

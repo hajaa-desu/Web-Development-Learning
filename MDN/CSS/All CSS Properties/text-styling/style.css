@@ -1,0 +1,76 @@
+html, pre {
+	font-family: Barlow, Verdana, sans-serif;
+}
+
+.ts-font-variant {
+	/* font-variant: small-caps; /* SHORTHAND */
+	font-family: initial;
+	font-variant-caps: small-caps;
+	font-variant-numeric: oldstyle-nums;
+	font-variant-alternates: historical-forms;
+	font-variant-east-asian:ruby full-width jis83;
+}
+
+.ts-font-kerning {
+	font-family: Verdana;
+	font-size: 50px;
+	font-kerning: none;
+	font-variant-ligatures: normal;
+}
+
+.super {
+	font-variant-position: super;
+}
+
+.ts-font-size-adjust {
+	font-size-adjust: 1.5;
+}
+
+.ts-font-stretch {
+	font-family: Barlow;
+	font-stretch: condensed; /* only works if the stretched version is available */
+	text-decoration: underline;
+}
+
+.ts-font-indent {
+	text-indent:5em;
+}
+
+.ts-text-overflow {
+	background-color: #a2b6d6;
+	width: 200px;
+	height: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: pre-line;
+}
+
+.ts-word-break {
+	background-color: #a2b6d6;
+	width: 200px;
+	word-break: break-all;
+	direction: rtl;
+}
+
+.ts-hyphens {
+	background-color: #a2b600;
+	width: 200px;
+	white-space: pre-line;
+	hyphens: manual;
+	text-align-last: center;
+}
+
+.ts-line-break {
+	background-color: #a2b6d6;
+	width: 200px;
+	line-break: strict;
+}
+
+
+div.ts-text-orientation {
+	background-color: #cccbbf;
+	text-align: center;
+	white-space: pre-line;
+	writing-mode: vertical-rl;
+	text-orientation: upright;
+}

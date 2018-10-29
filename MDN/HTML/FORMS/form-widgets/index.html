@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Form Widgets
+	</title>
+	<meta name="description" content="Form Widgets">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hajar Razip">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Montserrat|Charmonman" rel="stylesheet"> 
+	<link rel="stylesheet"  type="text/css" href="style.css" />
+</head>
+
+<body>
+
+	<nav>
+		<ul>
+			<li>Home</li>
+			<li>Shop</li>
+			<li>Contact Us</li>
+		</ul>	
+
+		<form class="search-field">
+			<div>
+				<input type="search" id="search" name="search" placeholder="Search">
+			</div>
+		</form>
+	</nav>
+	<form class="main-form">
+		<div class="main-form-container">
+		<fieldset>
+			<legend>Single Line Text Fields</legend>
+			<div>
+				<label for="text-df">
+					<span>Default: </span>
+					<input type="text" id="text-df" name="text-df" placeholder="I'm a text field">
+				</label>
+			</div>
+			<div>
+				<label for="text-focus">
+					<span>Restricted type: </span>
+					<input type="text" id="text-focus" name="text-focus" placeholder="lowercase and 4-8 long only" pattern="[a-z]{4,8}" autofocus>
+				</label>
+			</div>
+			<div>
+				<label for="text-db">
+					<span>Disabled: </span>
+					<input type="text" id="text-db" name="text-db" placeholder="I'm disabled" disabled>
+				</label>
+			</div>
+			<div>
+				<label for="text-email">
+					<span>e-mail: </span>
+					<input type="email" id="text-email" name="text-email" placeholder="chrismils@email.com">
+				</label>
+			</div>
+			<div>
+				<label for="pw">
+					<span>Password: </span>
+					<input type="password" is="pwd" name="pwd">
+				</label>
+			</div>
+			<div>
+				<label for="phone-num">
+					<span>Phone Number: </span>
+				</label>
+				<input type="tel" id="phone-num" name="phone-num">
+			</div>
+			<div>
+				<label for="url">
+					<span>URL: </span>
+				</label>
+				<input type="url" id="url" name="url">
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Multi-line Text Fields</legend>
+			<div>
+				<label for="tbox-un">
+					<i>This textbox is unresizable:</i>
+				</label>
+				<textarea id="tbox-un" name="tbox-un" cols="30" rows="3"></textarea>
+			</div>
+			<div>
+				<label for="tbox">
+					<i>This textbox is resizable: </i>
+				</label>
+				<textarea id="tbox" name="tbox" cols="10" rows="1"></textarea>
+			</div>
+			<div>
+				<label for="tbox-wrap-soft">
+					<i>This textbox is wrapped softly: </i>
+				</label>
+				<textarea id="tbox-wrap-soft" name="tbox-wrap-soft" cols="40" rows="1" wrap="hard"></textarea>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Drop-down widget</legend>
+			<div>
+				<label for="box-select">
+					<span>The Select Box: </span>
+				</label>
+				<select id="box-select" name="box-select">
+					<optgroup label="boys" value="Boys">
+						<option>Taka</option>
+						<option>Shouhei</option>
+						<option>Arman</option>
+					</optgroup>
+					<optgroup label="girls" value="Girls">
+						<option>Seina</option>
+						<option>Mayu</option>
+						<option selected>Karuizawa Girl</option>
+					</optgroup>
+			</select>
+			</div>
+			<div>
+				<label for="box-select-multips">
+					<span>The Multiple Selection Box: </span>
+				</label>
+				<select id="box-select-multips" name="box-select-multips" multiple>
+					<option>Tuna Sandwich</option>
+					<option>Bagel Burger</option>
+					<option>Macaroni and Cheese</option>
+					<option>Vege Pizza</option>
+					<option>Hotdog</option>
+					<option>Surprise Menu</option>
+				</select>
+			</div>
+			<div>
+				<label for="box-auto">
+					<span>A country you've yet visited?: </span>
+				</label>
+				<input type="text" name="box-auto" id="box-auto" list="box-auto-suggest">
+				<datalist id="box-auto-suggest">
+					<option>Afghanistan</option>
+					<option>Albania</option>
+					<option>Algeria</option>
+					<option>American Samoa</option>
+					<option>Andorra</option>
+					<option>Angola</option>
+				</datalist>
+			</div>
+			<div>
+				<label for="myFruit">What is your favorite fruit? (With fallback)</label>
+				<input type="text" id="myFruit" name="fruit" list="fruitList">
+				    
+				<datalist id="fruitList">
+				  <label for="suggestion">or pick a fruit</label>
+				  <select id="suggestion" name="altFruit">
+				    <option>Apple</option>
+				    <option>Banana</option>
+				    <option>Blackberry</option>
+				    <option>Blueberry</option>
+				    <option>Lemon</option>
+				    <option>Lychee</option>
+				    <option>Peach</option>
+				    <option>Pear</option>
+				  </select>
+				</datalist>
+			</div>
+		</fieldset>
+
+		<fieldset>
+			<legend>Checkable Items</legend>
+
+			<!-- Checkbox -->
+			<fieldset class="inner-fieldset">
+				<legend>BUCKET LIST [checkbox]</legend>
+				<div id="blist-1">
+					<input type="checkbox" id="skydiving" name="skydiving" value="skydiving">
+					<label for="skydiving">
+						Skydiving
+					</label>
+				</div>
+				<div id="blist-2">
+					<input type="checkbox" id="start-business" name="start-business" value="start-business">
+					<label for="start-business">
+						Start a business
+					</label>
+				</div>
+				<div id="blist-3">
+					<input type="checkbox" id="pro-artist" name="pro-artist" value="pro-artist">
+					<label for="pro-artist">
+						Be a professional artist
+					</label>
+				</div>
+				<div id="blist-4">
+					<input type="checkbox" id="buy-house" name="buy-house" value="buy-house" checked>
+					<label for="buy-house">
+						Buy a House
+					</label>
+				</div>
+			</fieldset>
+
+			<!-- Radio Button -->
+			<fieldset class="inner-fieldset">
+				<legend>RATING [radio button]</legend>
+				<ul class="radio-list">
+					<li>
+						<input type="radio" id="rate-1" name="rating" value="rate-1">
+						<label for="rate-1">⭐</label>
+					</li>
+					<li>
+						<input type="radio" id="rate-2" name="rating" value="rate-2">
+						<label for="rate-2">⭐⭐</label>
+					</li>
+					<li>
+						<input type="radio" id="rate-3" name="rating" value="rate-3">
+						<label for="rate-3">⭐⭐⭐</label>
+					</li>
+					<li>
+						<input type="radio" id="rate-4" name="rating" value="rate-4">
+						<label for="rate-4">⭐⭐⭐⭐</label>
+					</li>
+					<li>
+						<input type="radio" id="rate-5" name="rating" value="rate-5">
+						<label for="rate-5">⭐⭐⭐⭐⭐</label>
+					</li>
+				</ul>
+			</fieldset>
+
+		</fieldset>
+
+		<fieldset>
+			<legend>Button</legend>
+			<table>
+				<tr>
+					<td>Random Number: </td>
+					<td id="rand-num-space"><p></p></td>
+					<td><input type="button" id="gen-num" value="Generate"></td>
+				</tr>
+			</table>
+		</fieldset>
+
+		<fieldset>
+			<fieldset>
+				<legend>Advanced Widgets</legend>
+				
+				<fieldset>
+					<legend>Numbers and Sliders</legend>
+						<input type="number" name="age" id="age" min="1" max="99" step="2">
+						
+						<div id="range-val">
+						<input type="range" name="myslider" id="myslider" min="0" max="500" step="20"><span></span>
+						</div>
+
+						<label for="beans">How many beans can you eat?</label>
+						<input type="range" name="beans" id="beans" min="0" max="500" step="10">
+						<span class="beancount"></span>
+				</fieldset>
+
+				<fieldset>
+					<legend>Date and time picker</legend>
+					<div id="datetime">
+						<p style="color:red;"><i>This does not work on firefox!</i></p>
+						<label for="datetime">
+							Datetime-local
+						</label>
+						<input type="datetime-local" name="datetime" id="datetime">
+					</div>
+					<div>
+						<label for="month">Month picker: </label>
+						<input type="month" name="month" id="month">
+					</div>
+					<div>
+						<label for="time">Time picker: </label>
+						<input type="time" name="time" id="time">
+					</div>
+					<div>
+						<label for="myDate">When will be our next date? I need it to be in the summer.</label>
+						<input type="date" name="myDate" min="2013-06-01" max="2013-08-31" id="myDate">
+					</div>
+					<div>
+						<input type="color" name="color" id="color">
+					</div>
+				</fieldset>
+			</fieldset>
+		</fieldset>
+
+		<fieldset>
+			<legend>Other Widgets</legend>
+			<fieldset>
+				<legend>File Picker</legend>
+					<input type="file" id="file" name="file" multiple>
+			</fieldset>
+			<fieldset>
+				<legend>Hidden Content</legend>
+					<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+			</fieldset>
+			<fieldset>
+				<legend>Image Button</legend>
+					<input type="image" alt="Click me!" src="../img/icon/ig.jpg" width="80px" height="80px">
+			</fieldset>
+
+			<fieldset>
+				<legend>Meters and Progress Bars</legend>
+				
+				<fieldset>
+					<legend>Progress</legend>
+				<div>
+					<label for="progress">Progress Bar</label>
+					<progress id="progress" max="100" value="75">75/100</progress>
+				</div>	
+				</fieldset>
+				
+				<fieldset>
+					<legend>Meter</legend>
+					<p style="color: grey;">
+						<i>Consist of 3 parts - "optimum" can be set to be within any part. Each part is associated with a status: Prefered, average, worst (starting from the optimum assigned part, and spreads out). The meter bar changes color according to where "value" is assigned on the range.</i>
+					</p>
+					<div>
+						<label>Meter</label>
+						<meter min="0" max="100" value="50" low="33" high="66" optimum="50">50</meter>
+					</div>	
+				</fieldset>
+				
+			</fieldset>
+		</fieldset>
+
+	</div>
+			<div id="submit-1">
+				<button type="submit">Submit!</button>
+				<button type="reset">Reset</button>
+			</div>
+	</form>
+
+	<script src='script.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+/* General styles */
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: 'Helvetica neue', Arial, 'sans serif';
+  font-size: inherit;
+  background-color: #ccc;
+}
+
+html h2, html p /* 0002 */{
+  margin: 0;
+}
+
+h2 /* 0001 */ 
+{
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+/* Card container styles */
+
+.card /* 0010 */
+{
+  width: 35em;
+  height: 22em;
+  margin: 5em auto;
+  background-color: red;
+  border: 0.2em solid black;
+  border-radius: 1.5em;
+}
+
+.card article img /* 0012 */
+{
+  max-height: 100%;
+  float: right;
+}
+
+.card article /* 0011 */ 
+{
+  height: 12em;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card article p /* 0012 */
+{
+  color: white;
+  padding: 1em;
+}
+/* Header styles */
+.card header /* 0011 */
+{
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+  border-radius: 1.5em 1.5em 0 0;
+}
+
+/* Footer styles */ 
+.card header, .card footer /* 0011 */
+{
+  height: 3em;
+  padding: 1em;
+  border: 0px solid white;
+}
+
+.card footer p /* 0012 */
+{
+  font-size: 1.5em;
+  line-height: 2.0;
+} 
+
+.card footer /* 0011 */
+{
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+  border-radius: 0 0 1.5em 1.5em;
+}
+
+
+
+
+
+
+
+

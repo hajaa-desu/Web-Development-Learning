@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript inheritance</title>
+    <style>
+      html {
+        background: url('../img/loish.jpg');
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <label for="jscode">Enter code:</label>
+      <input type="text" id="jscode">
+      <button>Submit code</button>
+    </div>
+
+    <p></p>
+  </body>
+
+    <script>
+      var input = document.querySelector('input');
+      var btn = document.querySelector('button');
+      var para = document.querySelector('p');
+      btn.onclick = function() {
+        var code = input.value;
+        para.textContent = eval(code);
+      }
+      function Person(first, last, age, gender, interests) {
+        this.name = {
+          first,
+          last
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+      };
+      Person.prototype.bio = function() {
+        // First define a string, and make it equal to the part of
+        // the bio that we know will always be the same.
+        var string = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ';
+        // define a variable that will contain the pronoun part of
+        // the second sentence
+        var pronoun;
+        // check what the value of gender is, and set pronoun
+        // to an appropriate value in each case
+        if(this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
+          pronoun = 'He likes ';
+        } else if(this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
+          pronoun = 'She likes ';
+        } else {
+          pronoun = 'They like ';
+        }
+        // add the pronoun string on to the end of the main string
+        string += pronoun;
+        // use another conditional to structure the last part of the
+        // second sentence depending on whether the number of interests
+        // is 1, 2, or 3
+        if(this.interests.length === 1) {
+          string += this.interests[0] + '.';
+        } else if(this.interests.length === 2) {
+          string += this.interests[0] + ' and ' + this.interests[1] + '.';
+        } else {
+          // if there are more than 2 interests, we loop through them
+          // all, adding each one to the main string followed by a comma,
+          // except for the last one, which needs an and & a full stop
+          for(var i = 0; i < this.interests.length; i++) {
+            if(i === this.interests.length - 1) {
+              string += 'and ' + this.interests[i] + '.';
+            } else {
+              string += this.interests[i] + ', ';
+            }
+          }
+        }
+        // finally, with the string built, we alert() it
+        alert(string);
+      };
+      Person.prototype.greeting = function() {
+        alert('Hi! I\'m ' + this.name.first + '.');
+      };
+      Person.prototype.farewell = function() {
+        alert(this.name.first + ' has left the building. Bye for now!');
+      }
+      var person1 = new Person('Tammi', 'Smith', 17, 'female', ['music', 'skiing', 'kickboxing']);
+
+      function Teacher(first, last, age, gender, interests, subject) {
+        Person.call(this, first, last, age, gender, interests);
+
+        this.subject = subject;
+      }
+
+      Teacher.prototype = Object.create(Person.prototype);
+      Teacher.prototype.constructor = Teacher;
+
+      Teacher.prototype.greeting = function() {
+        var prefix;
+        if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
+          prefix = 'Mr.';
+        } else if (this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F' ) {
+          prefix = 'Mrs.'; 
+        } else {
+          prefix = 'Mx.';
+        }
+
+        alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+      }
+
+      function Student(first, last, age, gender, interests) {
+        Person.call(this, first, last, age, gender, interests);
+      }
+
+      Student.prototype = Object.create(Person.prototype);
+      Student.prototype.constructor = Student; 
+
+      Student.prototype.greeting = function() {
+        alert("やほ！ " + this.name.last + "-ちゃんです！");
+      }
+
+      var person1 = new Person('Mike', 'Bow', 27, 'Male', ['kPop', 'Music', 'Video Editing']);
+      var teacher1 = new Teacher('Francois', 'Ruerue', 43, 'Female', ['DnD', 'Hunting', 'Cakes'], 'French');
+      var student1 = new Student('Emily', 'Tart', 15, 
+        'Female', ['Hanging Out', 'Pixel Art']); 
+
+      function whatAmITag(strings, personName, personType) {
+        var type = 'a regular ole person'; 
+        if (personType === 'Student') {
+        type = 'a great student, I think';
+        } else if (personType === 'Teacher') {
+        type = 'actually have no qualifications of teaching the subject I\'m teaching but somebody gotta pay the bills';
+        } 
+        return `${strings[0]}${personName}${strings[1]}${type}`;
+        }
+
+      console.log(whatAmITag`Hi, i am ${teacher1.name.first + ' ' + teacher1.name.last} and I am ${teacher1.constructor.name}`);
+    </script>
+</html>
+
+<!--
+
+Inheritence in JS is all about linking codes here and there.
+
+For the parent, the constructor function includes all the properties to be created for its instances.
+
+The child class constructor function will call the Parent's constructor function, which containing codes will create the same properties on the instances of the child class i.e. Parent's constructor function will be called in the child's context. 
+
+To parent's methods are defined outside the constructor function, on its prototype (parent.prototype.methodName = function() {...}). So when the constructor function is called in the child class, only the properties are inherited.
+
+To inherit the method, we set child.prototype = Object.create(parent.prototype). When Object.create is called (x = Object.create(y)), an empty object is assigned to x (if x is an existing object, then existing properties are maintained) and the prototype will link to x. parent.prototype will only contain methods and properties assigned to that prototype, so the properties in teh constructor function is not contained. This will let child inherit the methods and properties defined in parent. 
+
+The final problem is now child's constructor property is set to parent's constructor function. Because the parent prototype is set to child's prototype. To link the constructor to child's constructor, we must interfere with the prototype chain. So we set the child's prototype constructor property to the constructor function of child.
+
+So in child's prototype, initially, in child.prototype, tehre is prototype.constructor == Person(), now there is conctructor == Child() and prototype.constructor == Person(). When constructor is called on child, it will stop at the first discoverable constructor property.  
+  -->

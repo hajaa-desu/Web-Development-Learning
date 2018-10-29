@@ -1,0 +1,21 @@
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+p {
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	border: 1px solid #9e7c7c;
+	font-size: 1.8rem;
+	background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0,0,0,0.2) 30%),
+					  #9e7c7c;
+	color: #b29292;
+	text-shadow: 0 0 2px black;
+	border-radius: 10px;
+	box-shadow: 3px 3px 5px black,
+				inset 3px 3px 5px rgba(255, 255, 255, 0.7),
+				inset -3px -3px 5px rgba(255, 255, 255, 0.7);
+}

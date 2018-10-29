@@ -1,0 +1,17 @@
+.wrapper {
+	background-color: #c99984;
+	width: 50%;
+	height: 400px;
+	display: relative;
+	margin: auto;
+	display: flex;
+}
+
+.box {
+	background-color: #d1ce9c;
+	width: 20%;
+	height: 100px;
+	display: inline-block;
+	margin-left: 10px;
+	border: 1px solid grey;
+}

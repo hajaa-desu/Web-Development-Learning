@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<title> Testing CSS boxes</title>
+
+	<meta name="author" content="Hajar Razip">
+	<meta name="description" content="Hajar's test webpage learning css">
+	<meta name="keywords" content="Hajar, Razip, mshajarrazip">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
+	<link href="style.css" rel="stylesheet" type="text/css">
+
+	<style>
+
+		body {
+			font-family: "Barlow";
+		}
+
+		header {
+			background-color: white;
+			position: fixed;
+		}
+
+		#main-nav ul li {
+			list-style: none;
+			display: inline;
+		}
+
+		#wrapper {
+			background-image: url("wc_flower_bg.jpg");
+			background-clip: content-box;
+			width: 1000px;
+			height: 1000px;
+			border: 20px solid rgba(0, 0, 0, 0.5);
+			overflow: auto;
+			position: relative;
+			top: 5em;
+			outline: 10px solid red;
+		}
+
+		div img#dp {
+			width: 10em;
+			height: 10em;
+			border: 5px solid rgba(0, 0, 0, 0.5);
+			border-radius: 50%;
+			position: absolute;
+			margin: auto;
+			top: 0;
+    		left: 0;
+    		right: 0;
+    		bottom: 0;
+		}
+
+		p {
+			text-align: center;
+			color: white;
+			background-color: rgba(0,0,0,0.5);
+		}
+
+		.highlight-red {
+			display: block;
+			background-color: red;
+			opacity: 0.5;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav id="main-nav">
+			<ul>
+				<li> HOME </li>
+				<li> OFFICE </li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+	<div id="wrapper">
+	  <img id="dp" alt="A picture painted by Loish" src="loish.png">
+	  <p> Said Tommy the Cat as he reeled back to clear whatever foreign matter
+ may have nestled its way into his mighty throat.<span class="highlight-red">Many a fat alley rat had met its demise while staring point blank down the cavernous barrel of
+ this awesome prowling machine.</span> </p>
+	</div>
+	</main>
+</body>
+
+</html>

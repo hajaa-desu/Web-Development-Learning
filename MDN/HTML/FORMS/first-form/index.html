@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Simple HTML Form 
+	</title>
+	<meta name="description" content="HTML Forms">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hajar Razip">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Montserrat" rel="stylesheet"> 
+	<link rel="stylesheet"  type="text/css" href="style.css" />
+</head>
+
+<body>
+	<h1>Order</h1>
+	<form action="/my-handling-form-page" method="post">
+		<fieldset>
+		<legend> Personal Information </legend>
+		<div>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="user_name" value="<First> <Last>">
+		</div>
+		<div>
+			<label for="email">E-mail:</label>
+			<input type="email" id="email" name="user_mail" value="email address">
+		</div>
+		<div>
+			<label for="msg">Message:</label>
+			<textarea id="msg" name="user_message"></textarea>
+		</div>
+		</fieldset>
+
+		<fieldset>
+    	<legend>Fruit juice size</legend>
+    		<p>
+    		  <input type="radio" name="size" id="size_1" value="	small">	
+    		  <label for="size_1">Small</label>
+    		</p>
+    		<p>
+    		  <input type="radio" name="size" id="size_2" value="	medium">	
+    		  <label for="size_2">Medium</label>
+    		</p>
+    		<p>
+    		  <input type="radio" name="size" id="size_3" value="	large">	
+    		  <label for="size_3">Large</label>
+    		</p>
+  		</fieldset>
+
+  		<fieldset>
+  		<legend> EXAMPLE 1: MULTIPLE LABELS </legend>
+  			<p class="noticeAlerts"> Required fields are followed by <abbr title="required">*</abbr>.</p>
+
+  			<!-- So this: -->
+        	<!--<div>
+        		<label for="username">Name:</label>
+        		<input type="text" name="username">
+        		<label for="username"><abbr title="required">*</abbr></label>
+        	</div>-->
+	
+	        <!-- would be better done like this: -->
+	        <!--<div>
+	        	<label for="username">
+	        	  <span>Name:</span>
+	        	  <input id="username" type="text" name="username">
+	        	  <abbr title="required">*</abbr>
+	        	</label>
+	        </div>-->
+	
+	        <!-- But this is probably best: -->
+	        <div>
+	        	<label for="username">Name: <abbr title="required">*</abbr></label>
+	        	<input id="username" type="text" name="username">
+			</div>
+		</fieldset>
+		
+		<div class="button">
+			<button type="submit">SEND!</button>
+		</div>
+	</form>
+</body>
+
+	<script src='script.js'></script>
+</html>
