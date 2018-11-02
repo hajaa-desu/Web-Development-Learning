@@ -1,0 +1,56 @@
+html {
+	background: url('../img/rei1.jpg');
+}
+
+* {
+	font-family: 'Chakra Petch', sans-serif;
+	font-size: 11px;
+}
+
+body {
+	width: 350px;
+	padding: 50px;
+	background-color: white;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	margin: 100px auto;
+}
+
+fieldset {
+	margin-top: 10px;
+	background-color: rgb(190, 218, 224);
+}
+
+legend {
+	font-size: 1.2rem;
+	background-color: black;
+	color: white;
+}
+
+div {
+	margin: 10px auto;
+}
+
+.send-button {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.note {
+	font-style: italic;
+	color: red;
+}
+
+.code {
+	font-style: none;
+	font-family: 'Courier', serif;
+}
+
+.center-aligned {
+	text-align: center;
+}
+
+#fruit {
+	font-size: 2.0rem;
+	text-align: center;
+}

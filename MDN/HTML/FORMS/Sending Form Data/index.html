@@ -40,7 +40,7 @@
 			</div>
 		</fieldset>
 	</form>
-	<form action="#" method="post">
+	<form action="php-example.php" method="post">
 		<fieldset>
 			<legend>POST</legend>
 			<p class="note">Data is appended to the body of the http request</p>
@@ -52,12 +52,24 @@
 				<label for="to">and it is meant for a certain</label>
 				<input name="to" id="to" value="beloved"> 
 			</div>
-			<div> class="send-button">
+			<div class="send-button">
 				<button>Send</button>	
 			</div>
 		</fieldset>
 	</form>
+	<form action="#" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend>SENDING FILES</legend>
+		<div>
+			<label for="file">Choose a file</label>
+			<input type="file" id="file" name="myFile">
+		</div>
 
+		<div class="send-button">
+			<button>Send</button>
+		</div>
+		</fieldset>
+	</form>
 	<script src="script.js"></script>
 </body>
 

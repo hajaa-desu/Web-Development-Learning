@@ -1,0 +1,16 @@
+/* 
+#fruit:invalid {
+	background-color: yellow;
+}*/
+
+input:invalid {
+  /* border: 2px dashed red; */
+  box-shadow: 0px 0px 5px rgba(255, 0, 0, 0.5);
+  background-color: red;
+  color: yellow;
+}
+
+input:valid {
+  box-shadow: 0px 0px 5px lightgreen;
+  background-color: lightgreen;
+}
