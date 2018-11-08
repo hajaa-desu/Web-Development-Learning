@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Sending Form Data
+	</title>
+	<meta name="description" content="Sending Form data">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hajar Razip">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Montserrat|Charmonman" rel="stylesheet"> 
+	<link rel="stylesheet"  type="text/css" href="style.css" />
+	<script src="script.js"></script>
+</head>
+
+<body>
+		<form action="php-example.php" method="post">
+		<fieldset>
+			<legend>POST</legend>
+			<p class="note">Data is appended to the body of the http request</p>
+			<div>
+				<label for="say">The greeting is </label>
+				<input name="say" id="say" value="Hello">
+			</div>
+			<div>
+				<label for="to">and it is meant for a certain</label>
+				<input name="to" id="to" value="beloved"> 
+			</div>
+			
+			<div class="send-button">
+				<!--	<button >Send</button> -->
+				<button type="button" onclick="sendData({test:'ok'})">Cliquer sur!</button>	
+			</div>
+		</fieldset>
+	</form>
+</body>
+
+</html>

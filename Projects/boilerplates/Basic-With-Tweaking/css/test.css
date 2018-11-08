@@ -1,0 +1,157 @@
+html {
+	background: url('../img/rei1.jpg');
+	font-family: 'Chakra Petch', sans-serif;
+	font-size: 10px;
+}
+
+input {
+	font-size: 1.0rem;
+}
+
+form.main-form {
+	width: 1500px;
+	background-color: white;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	padding: 20px;
+	margin: 100px auto auto auto;
+	box-sizing: border-box;
+
+}
+
+.main-form-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 600px) {
+	form.main-form {
+		width: 90%;
+		min-width: 400px;
+	}
+	.main-form-container {
+		display: initial;
+	}
+}
+
+fieldset {
+	width: 90%;
+}
+fieldset legend {
+	background-color: black;
+	color: white;
+	font-size: 1.2rem;
+}
+
+label span {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+
+div+div {
+	margin-top: 1.2rem;
+}
+
+div[id="submit-1"] {
+	display: flex;	
+	justify-content: center;
+}
+
+nav {
+	width: 100%;
+	background-color: black;
+	color: white;
+	padding: 5px 0;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 2.0rem;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+	position: relative;
+	margin: 0px auto;
+}
+nav ul li {
+	display: inline-block;
+	list-style: none;
+}
+
+textarea {
+	font-family: 'Charmonman', sans-serif;
+}
+
+input[type="search"] {
+	margin: 10px;
+	border-radius: 10px;
+	float: right;
+	background: url('../img/icon/search.png') no-repeat right top,
+				white;
+	background-size: 1.2em 1.2em;
+}
+
+textarea[id="tbox"] {
+	display: block;
+}
+
+textarea[id="tbox-un"] {
+	display: block;
+	resize: none; 
+	font-size: 1.2rem;
+}
+
+select optgroup[label="boys"] {
+	color: midnightblue;
+}
+
+select optgroup[label="girls"] {
+	color: salmon;
+}
+
+label[for="box-select-multips"] {
+	vertical-align: top;
+}
+
+select[id="box-select-multips"] {
+	height: 3.0em;
+}
+
+label[for="box-auto"] span {
+	width: 150px;
+}
+
+fieldset+fieldset {
+	margin: 20px auto;
+}
+
+.inner-fieldset {
+	background: url('../img/rei2.jpg') center;
+	border-style: none;
+	margin: 30px auto;
+	width: 60%;
+	background-attachment: fixed;
+}
+
+div[id*="blist"] {
+	background-color: rgba(255, 255, 255, 0.2);
+	margin: 0.5em auto;
+}
+
+.radio-list {
+	list-style: none;
+}
+
+#rand-num-space {
+	padding: 10px;
+	width: 100px;
+	text-align: center;
+	border: 1px solid red;
+}
+
